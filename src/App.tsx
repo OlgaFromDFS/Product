@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Card } from './component/Card';
+
+const product = [
+  {
+  image: '/product_images/first_aid_kit.png',
+  title: 'Портативная медицинская сумка',
+  link: '#',
+  discount: 25,
+  rating: 4.7,
+  sold: 123,
+  price: 1450,
+  oldPrice: 1645,
+  }
+];
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {product.map((product, i) => 
+        <Card
+          key={i}
+          image={product.image} 
+          title={product.title} 
+          link={product.link} 
+          discount={product.discount} 
+          rating={product.rating} 
+          sold={product.sold} 
+          price={product.price} 
+          oldPrice={product.oldPrice} 
+        />
+      )}
     </div>
   );
 }
 
-export default App;
+export { App };

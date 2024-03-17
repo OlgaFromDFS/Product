@@ -1,0 +1,113 @@
+.Card {
+    margin: 30px 0 0 30px;
+    padding: 0 0 8px 0;
+
+    width: 159px;
+    height: 202px;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: 0 -1px 25px -7px var(--color-border-card-shadow);
+
+    overflow: hidden;
+
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+.Card-Image {
+    width: 159px;
+    height: 127px;
+
+    object-fit: cover;
+}
+
+.Card-Title {
+    margin: 3px 0 0 9px;
+
+    width: 138px;
+
+    font-weight: var(--text-weight-s);
+    font-size: var(--text-size-m);
+
+    color: var(--color-text-primary);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+.Card-Link {
+    margin: 0;
+
+    text-decoration: none;
+}
+
+.Card-Discount {
+    margin: 0;
+    
+    width: 46px;
+    height: 22px;
+
+    position: absolute;
+
+    top: 129px;
+    left: 39px;
+
+    background-image: linear-gradient(var(--color-discount-background-dark-blue), var(--color-discount-background-blue));
+
+    border-radius: var(--border-radius);
+
+    font-weight: var(--text-weight-l);
+    font-size: var(--text-size-xs);
+    line-height: var(--text-line);
+
+    text-align: center;
+
+    color: var(--color-text-white);
+}
+
+.Card-Rating {
+    margin: 5px 0 0 9px;
+    
+    font-weight: var(--text-weight-s);
+    font-size: var(--text-size-m);
+
+    color: var(--color-text-primary);
+
+    display: inline-block;
+}
+
+.Card-Sold {
+    margin: 5px 0 0 5px;
+    
+    font-weight: var(--text-weight-s);
+    font-size: var(--text-size-m);
+
+    color: var(--color-text-secondary);
+
+    display: inline-block;
+}
+
+.Card-Price {
+    margin: 13px 0 0 9px;
+    
+    font-weight: var(--text-weight-l);
+    font-size: var(--text-size-l);
+
+    color: var(--color-text-primary);
+}
+
+.Card-OldPrice {
+    margin: 0;
+    
+    font-weight: var(--text-weight-m);
+    font-size: var(--text-size-s);
+
+    color: var(--color-text-secondary);
+
+    text-decoration: line-through;
+
+    display: inline-block;
+}
