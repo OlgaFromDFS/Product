@@ -21,10 +21,10 @@ const Card: FC<CardProps> = ({ image, title, link, discount, rating, sold, price
     <div className={cnCard()}>
       <img className={cnCard('Image')} src={image}/>
       <a className={cnCard('Link')} href={link}><p className={cnCard('Title')}>{title}</p></a>
-      <p className={cnCard('Discount')}>- {discount}%</p>
+      {discount} ? <p className={cnCard('Discount')}>- {discount}%</p> : {undefined} 
       <p className={cnCard('Rating')}>{rating} <img className={cnCard('RatingImage')} src='/product_images/star.svg'/></p>
       <p className={cnCard('Sold')}>{sold} купили</p>
-      <p className={cnCard('Price')}>{price} ₽ <p className={cnCard('OldPrice')}>{oldPrice} ₽</p></p>
+      <p className={cnCard('Price')}>{price} ₽ {oldPrice} ? <p className={cnCard('OldPrice')}>{oldPrice} ₽</p> : {undefined}</p>
     </div>
   )
 };
